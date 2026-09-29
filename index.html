@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IP Innovation//Systems — Initializing</title>
+    <link rel="stylesheet" href="css/splash.css" />
+</head>
+<body>
+    <!-- Splash Container: transparent background, floating content -->
+    <div id="splash-container" class="splash-container">
+        <!-- Three.js WebGL Canvas -->
+        <canvas id="glass-canvas" class="glass-canvas"></canvas>
+
+        <!-- Logo & Text Overlay (positioned over canvas) -->
+        <div id="content-overlay" class="content-overlay">
+            <!-- IP Innovation//Systems Logo/Text -->
+            <div id="logo-container" class="logo-container">
+                <svg
+                    id="ip-logo"
+                    class="ip-logo"
+                    viewBox="0 0 300 100"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <!-- Placeholder: will be replaced with actual IP Innovation//Systems SVG -->
+                    <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-size="48" fill="white" font-weight="bold">
+                        IP Innovation//Systems
+                    </text>
+                </svg>
+            </div>
+
+            <!-- DEFIO Container (appears after logo stabilizes) -->
+            <div id="defio-container" class="defio-container">
+                <div id="defio-text" class="defio-text">DEFIO</div>
+                
+                <!-- Loading Indicator -->
+                <div id="loading-indicator" class="loading-indicator">
+                    <div class="loading-bar"></div>
+                    <div class="loading-label">Loading</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fallback message for non-WebGL browsers -->
+        <div id="fallback-container" class="fallback-container">
+            <h1>IP Innovation//Systems</h1>
+            <p>Initializing DEFIO...</p>
+            <div class="fallback-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Three.js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- GSAP Timeline from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- Project Scripts -->
+    <script src="js/splash-controller.js"></script>
+    <script src="js/scene.js"></script>
+    <script src="js/glass.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/logo.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
